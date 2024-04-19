@@ -1,5 +1,4 @@
 import React from "react";
-import ButtonOpenPopupDetailMovie from "./popupDetailMovie";
 
 const MovieCard = ({ movie }: { movie: any }) => {
     return (
@@ -18,7 +17,6 @@ const MovieCard = ({ movie }: { movie: any }) => {
                     {movie.overview.length > 150 ? movie.overview.substring(0, 150) + "..." : movie.overview}
                 </p>
             </div>
-            <ButtonOpenPopupDetailMovie movie={movie}/>
         </div>
     );
 }
