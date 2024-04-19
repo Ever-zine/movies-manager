@@ -8,7 +8,7 @@ const FetchMovieFromApi = async (query : string) => {
             accept: 'application/json'
             }
         };
-        const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=fr-FR&page=1&api_key=${process.env.API_KEY}`;
+        const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=fr-FR&page=1&api_key=${process.env.NEXT_PUBLIC_API_KEY}`;
 
         // Appel de la requête
         const response = await fetch(url, options);
@@ -19,6 +19,7 @@ const FetchMovieFromApi = async (query : string) => {
 
         // Si ça a fonctionné, on récupère les données
         const data = await response.json();
+        console.log(data);
         return data;
 
     }
